@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SESGO ESTUDIO — Diseño web y sistemas digitales en Mazatlán</title>
+<meta name="description" content="Estudio creativo independiente en Mazatlán. Diseño web, menús y catálogos digitales, pedidos por WhatsApp y sistemas personalizados. Precios de apertura desde $2,000 MXN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F7F5EE;
+    --bg-alt: #EFECE2;
+    --ink: #111111;
+    --mut: #55534E;
+    --accent: #6374E8;
+    --accent-soft: #DCE0FA;
+    --card: #FFFFFF;
+    --line: #E0DDD2;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* =========================================
+     INTRO ANIMADA (PRELOADER)
+     ========================================= */
+  #intro-screen {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease;
+  }
+
+  #intro-screen.hidden {
+    transform: translateY(-100%);
+    pointer-events: none;
+  }
+
+  .intro-logo-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .intro-star {
+    position: absolute;
+    top: -38px;
+    left: -28px;
+    width: 135px;
+    height: 135px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .intro-star path {
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    animation: drawStar 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.15s;
+  }
+
+  .intro-wordmark {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(46px, 9vw, 76px);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    color: var(--ink);
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUpIntro 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.55s;
+  }
+
+  .intro-wordmark span {
+    color: var(--accent);
+  }
+
+  .intro-sub {
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0;
+    animation: fadeUpIntro 0.6s ease forwards 0.85s;
+  }
+
+  @keyframes drawStar {
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes fadeUpIntro {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* =========================================
+     FONDO DECORATIVO DE ESTRELLA SUTIL
+     ========================================= */
+  .bg-watermark-star {
+    position: fixed;
+    right: -120px;
+    top: 12%;
+    width: 580px;
+    height: 580px;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: 0;
+    transition: transform 0.15s ease-out;
+  }
+
+  /* =========================================
+     LAYOUT & HEADER EDITORIAL
+     ========================================= */
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 24px 72px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 24px;
+    border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 48px;
+  }
+
+  .brand-lockup {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .brand-title {
+    position: relative;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .brand-title .dot {
+    color: var(--accent);
+  }
+
+  .mini-star {
+    position: absolute;
+    left: -14px;
+    top: -14px;
+    width: 44px;
+    height: 44px;
+    z-index: -1;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  .header-meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .index-num {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .badge {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--mut);
+  }
+
+  /* =========================================
+     HERO SECTION
+     ========================================= */
+  .hero {
+    padding: 12px 0 36px;
+  }
+
+  .pill-tag {
+    display: inline-block;
+    background-color: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: clamp(44px, 8.2vw, 82px);
+    font-weight: 800;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  h1 em {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  
