@@ -554,27 +554,6 @@
       justify-content: center;
     }
   }
-
-
-/* INTRO SESGO — capas animadas independientes */
-#intro-screen{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:var(--bg);opacity:1;visibility:visible;transition:opacity .8s ease,visibility .8s ease}
-#intro-screen.hidden{opacity:0;visibility:hidden;pointer-events:none}
-.intro-logo-box{width:min(82vw,760px);aspect-ratio:1400/781;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.intro-star{position:absolute;width:21%;height:auto;top:8%;left:39.5%;overflow:visible}
-.intro-star path{stroke:var(--accent);stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:650;stroke-dashoffset:650;animation:drawStar 1.3s var(--ease) .05s forwards}
-.intro-wordmark{position:absolute;top:39%;left:0;width:100%;display:flex;justify-content:center;align-items:baseline;gap:.005em;font-size:clamp(48px,9vw,118px);font-weight:800;letter-spacing:-.065em;line-height:1;color:var(--ink)}
-.intro-letter{display:inline-block;opacity:0;transform:translate3d(0,8%,0);animation:rise .9s var(--ease) forwards}
-.intro-letter:nth-child(1){animation-delay:.55s}.intro-letter:nth-child(2){animation-delay:.65s}.intro-letter:nth-child(3){animation-delay:.75s}.intro-letter:nth-child(4){animation-delay:.85s}.intro-letter:nth-child(5){animation-delay:.95s}
-.intro-dot{display:inline-block;color:var(--accent);opacity:0;transform:translate3d(0,-60%,0);animation:drop .8s var(--ease) 1.5s forwards}
-.intro-sub{position:absolute;top:66%;left:0;width:100%;text-align:center;font-size:clamp(9px,1.15vw,15px);font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);opacity:0;transform:translate3d(0,10px,0);animation:fade .9s var(--ease) 1.9s forwards}
-:root{--ease:cubic-bezier(.22,1,.36,1)}
-@keyframes drawStar{to{stroke-dashoffset:0}}
-@keyframes rise{to{opacity:1;transform:translate3d(0,0,0)}}
-@keyframes drop{to{opacity:1;transform:translate3d(0,0,0)}}
-@keyframes fade{to{opacity:1;transform:translate3d(0,0,0)}}
-@media(max-width:600px){.intro-logo-box{width:92vw}.intro-star{width:22%}.intro-wordmark{font-size:clamp(46px,12vw,82px)}.intro-sub{font-size:8px;letter-spacing:.2em}}
-@media(prefers-reduced-motion:reduce){.intro-star path,.intro-letter,.intro-dot,.intro-sub{animation-duration:.01s!important;animation-delay:0s!important;opacity:1;transform:none}}
-
 </style>
 </head>
 <body>
@@ -582,10 +561,11 @@
 <!-- PANTALLA DE INTRODUCCIÓN ANIMADA -->
 <div id="intro-screen" aria-hidden="true">
   <div class="intro-logo-box">
-    <svg class="intro-star" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M104 14 L123 76 L186 73 L133 111 L155 174 L102 134 L46 176 L70 112 L18 75 L82 77 Z"/>
+    <svg class="intro-star" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M104 14 L123 76 L186 73 L133 111 L155 174 L102 134 L46 176 L70 112 L18 75 L82 77 Z"
+            stroke="#6374E8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <div class="intro-wordmark" aria-label="SESGO"><span class="intro-letter">S</span><span class="intro-letter">E</span><span class="intro-letter">S</span><span class="intro-letter">G</span><span class="intro-letter">O</span><span class="intro-dot">.</span></div>
+    <div class="intro-wordmark">SESGO<span>.</span></div>
     <div class="intro-sub">Estudio Creativo Independiente</div>
   </div>
 </div>
@@ -819,7 +799,7 @@
     const intro = document.getElementById('intro-screen');
     setTimeout(() => {
       intro.classList.add('hidden');
-    }, 3800);
+    }, 1750);
   });
 
   // 2. Animaciones al hacer Scroll (Intersection Observer)
