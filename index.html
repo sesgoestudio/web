@@ -100,6 +100,19 @@ h2{font-size:clamp(28px,4.5vw,40px);font-weight:800;letter-spacing:-.03em;text-t
 .card p{color:var(--mut);font-size:15px}
 a.card{text-decoration:none;color:inherit}
 .go-link{color:var(--accent);margin-top:20px;font-weight:800}
+/* ===== LOGOTIPOS DE PROYECTOS ===== */
+.project-grid{align-items:stretch}
+.project-card{padding:0;overflow:hidden;min-height:100%;gap:0}
+.project-logo{height:190px;display:flex;align-items:center;justify-content:center;padding:30px;background:#fff;border-bottom:1px solid var(--line)}
+.project-logo img{display:block;width:min(78%,300px);height:100%;max-height:125px;object-fit:contain}
+.project-logo--mazwave{background:linear-gradient(135deg,#176b91,#103d60);border-bottom-color:#176b91}
+.project-logo--sai{background:#080808;border-bottom-color:#080808}
+.project-logo--sai img{width:min(78%,320px);max-height:90px}
+.project-logo--vruto{background:#fff}
+.project-copy{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:24px}
+.project-copy .go-link{margin-top:auto;padding-top:20px}
+@media(max-width:600px){.project-logo{height:170px}.project-copy{padding:21px}}
+
 .price-card.featured{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .price-card.featured p{color:#C7C3B8}
 .price-tag{display:inline-block;width:fit-content;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-bottom:14px}
@@ -213,10 +226,19 @@ body.ready .fab{opacity:1;transform:none;pointer-events:auto}
 
     <section id="proyectos">
       <div class="section-head reveal"><h2>Proyectos</h2><span>02 / TRABAJO REAL</span></div>
-      <div class="grid">
-        <a class="card reveal d1" href="https://mazwavetours.com/" target="_blank" rel="noopener"><div><div class="card-num">01 — TURISMO</div><h3>Maz Wave Tours</h3><p>Sitio web para experiencias y recorridos turísticos en Mazatlán.</p></div><strong class="go-link">Visitar sitio ↗</strong></a>
-        <a class="card reveal d2" href="https://sesgoestudio.github.io/saifilm/" target="_blank" rel="noopener"><div><div class="card-num">02 — AUDIOVISUAL</div><h3>SAI FILM</h3><p>Portafolio digital para servicios y proyectos audiovisuales.</p></div><strong class="go-link">Visitar sitio ↗</strong></a>
-        <a class="card reveal d3" href="https://vrutocafe.github.io/VRUTO/" target="_blank" rel="noopener"><div><div class="card-num">03 — GASTRONOMÍA</div><h3>VRUTO Café</h3><p>Demostración funcional de menú digital con pedidos por WhatsApp.</p></div><strong class="go-link">Probar demo ↗</strong></a>
+      <div class="grid project-grid">
+        <a class="card project-card reveal d1" href="https://mazwavetours.com/" target="_blank" rel="noopener">
+          <div class="project-logo project-logo--mazwave"><img src="proyectos/mazwave-logo.png" alt="Logotipo de Maz Wave Tours" loading="lazy"></div>
+          <div class="project-copy"><div class="card-num">01 — TURISMO</div><h3>Maz Wave Tours</h3><p>Sitio web para experiencias y recorridos turísticos en Mazatlán.</p><strong class="go-link">Visitar sitio ↗</strong></div>
+        </a>
+        <a class="card project-card reveal d2" href="https://sesgoestudio.github.io/saifilm/" target="_blank" rel="noopener">
+          <div class="project-logo project-logo--sai"><img src="proyectos/sai-film-logo.svg" alt="SAI FILM" loading="lazy"></div>
+          <div class="project-copy"><div class="card-num">02 — AUDIOVISUAL</div><h3>SAI FILM</h3><p>Portafolio digital para servicios y proyectos audiovisuales.</p><strong class="go-link">Visitar sitio ↗</strong></div>
+        </a>
+        <a class="card project-card reveal d3" href="https://vrutocafe.github.io/VRUTO/" target="_blank" rel="noopener">
+          <div class="project-logo project-logo--vruto"><img src="proyectos/vruto-logo.png" alt="Logotipo de VRUTO Café" loading="lazy"></div>
+          <div class="project-copy"><div class="card-num">03 — GASTRONOMÍA</div><h3>VRUTO Café</h3><p>Demostración funcional de menú digital con pedidos por WhatsApp.</p><strong class="go-link">Probar demo ↗</strong></div>
+        </a>
       </div>
     </section>
 
