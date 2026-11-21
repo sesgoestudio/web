@@ -2,59 +2,807 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101114">
-<title>Sesgo Estudio | Diseño web y soluciones digitales</title>
-<meta name="description" content="Diseño web, catálogos digitales y sistemas a medida para negocios. Sesgo Estudio convierte tus ideas en experiencias digitales que generan confianza y contactos. Mazatlán, Sinaloa.">
-<meta property="og:title" content="Sesgo Estudio — Tu negocio merece una mejor presencia digital">
-<meta property="og:description" content="Sitios web, catálogos y herramientas digitales hechas para tu negocio.">
-<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SESGO ESTUDIO — Diseño web y sistemas digitales en Mazatlán</title>
+<meta name="description" content="Sesgo Estudio: diseño web, menús y catálogos digitales, pedidos por WhatsApp y sistemas personalizados para negocios. Mazatlán, Sinaloa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#101114;--panel:#181a20;--ink:#f4f3ef;--muted:#a4a6b0;--line:rgba(255,255,255,.12);--accent:#a7f36b;--max:1120px}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:inherit}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.ambient{position:absolute;inset:0 0 auto;height:760px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 72% 15%,rgba(167,243,107,.13),transparent 34%),radial-gradient(ellipse at 10% 48%,rgba(111,124,255,.10),transparent 35%)}
-header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;letter-spacing:-1px}.brand-mark{width:34px;height:34px;border:1.5px solid var(--accent);border-radius:11px;display:grid;place-items:center;color:var(--accent);font-size:21px;transform:rotate(-8deg)}.brand small{display:block;color:var(--muted);font:600 9px 'DM Sans',sans-serif;letter-spacing:2px;margin-top:-3px}
-nav{display:flex;align-items:center;gap:28px}nav a{font-size:13px;color:var(--muted);text-decoration:none;transition:.2s}nav a:hover{color:var(--accent)}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;text-decoration:none;font-weight:700;transition:transform .2s,background .2s,border-color .2s}.nav-cta{padding:11px 17px;background:var(--accent);color:#111;font-size:12px}.button{padding:15px 22px;font-size:14px}.button:hover,.nav-cta:hover{transform:translateY(-2px)}.primary{background:var(--accent);color:#111;box-shadow:0 10px 35px rgba(167,243,107,.15)}.primary:hover,.nav-cta:hover{background:#c4ff91}.secondary{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.025)}.secondary:hover{border-color:var(--accent)}
-.hero{padding:112px 0 100px;max-width:900px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:25px}.eyebrow:before{content:"";width:25px;height:1px;background:var(--accent)}h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.055em}h1{font-size:clamp(49px,8.5vw,94px);line-height:.99;font-weight:600;max-width:900px}h1 span{color:var(--accent)}.hero-copy{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:650px;margin-top:27px;line-height:1.65}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.micro-proof{display:flex;gap:18px;flex-wrap:wrap;margin-top:27px;color:#c1c2c9;font-size:12px}.micro-proof span{display:flex;align-items:center;gap:7px}.micro-proof i{width:5px;height:5px;border-radius:50%;background:var(--accent)}
-.section{padding:76px 0;border-top:1px solid var(--line)}.section-top{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:32px}.kicker{font-size:10px;color:var(--accent);font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}h2{font-size:clamp(34px,5vw,55px);line-height:1.05;font-weight:600}.section-intro{max-width:420px;color:var(--muted);font-size:14px}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.service{background:linear-gradient(145deg,var(--panel),rgba(24,26,32,.55));border:1px solid var(--line);border-radius:18px;padding:27px;min-height:205px;transition:.25s}.service:hover{transform:translateY(-4px);border-color:rgba(167,243,107,.5)}.service-num{color:var(--accent);font-size:11px;font-weight:800;letter-spacing:1px}.service h3{font-size:25px;margin:27px 0 8px}.service p{color:var(--muted);font-size:14px;max-width:450px}.tag{display:inline-block;color:#d7f5c1;background:rgba(167,243,107,.09);border:1px solid rgba(167,243,107,.18);border-radius:99px;padding:5px 9px;font-size:10px;margin-top:17px}
-.offer{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.offer-main{background:var(--accent);color:#111;border-radius:22px;padding:36px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;min-height:300px}.offer-main .kicker{color:#25351b}.offer-main h3{font-size:clamp(34px,5vw,54px);line-height:1.02;margin:15px 0}.offer-main p{max-width:470px;color:#26331f;font-size:14px}.offer-main .button{background:#111;color:white;margin-top:25px}.offer-side{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:32px}.price{font:600 43px 'Space Grotesk',sans-serif;letter-spacing:-2px;margin:8px 0}.offer-side h3{font-size:23px}.offer-side p{color:var(--muted);font-size:14px}.included{list-style:none;margin-top:22px;display:grid;gap:10px;font-size:13px}.included li:before{content:"✓";color:var(--accent);font-weight:800;margin-right:10px}.note{color:var(--muted);font-size:11px;margin-top:15px}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project{position:relative;overflow:hidden;min-height:250px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#242833,#14161b);padding:24px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:.25s}.project:hover{transform:translateY(-4px);border-color:var(--accent)}.project:after{content:"";position:absolute;width:170px;height:170px;border:1px solid rgba(167,243,107,.18);border-radius:50%;right:-55px;top:35px;box-shadow:0 0 0 22px rgba(167,243,107,.025),0 0 0 44px rgba(167,243,107,.02)}.project-label{font-size:10px;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;font-weight:800}.project h3{font-size:28px;max-width:230px;line-height:1.1;margin-top:18px}.project p{font-size:12px;color:var(--muted);margin-top:8px}.project-link{font-size:12px;font-weight:700;margin-top:24px}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.step{border-top:1px solid var(--line);padding-top:18px}.step strong{font:600 30px 'Space Grotesk',sans-serif;color:var(--accent)}.step h3{font-size:18px;margin:15px 0 6px}.step p{font-size:13px;color:var(--muted)}.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.faq-list details{border-bottom:1px solid var(--line);padding:18px 0}.faq-list summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:15px}.faq-list summary:after{content:"+";color:var(--accent);font-size:20px}.faq-list details[open] summary:after{content:"−"}.faq-list p{color:var(--muted);font-size:13px;padding:12px 25px 0 0}
-.contact{background:linear-gradient(130deg,#1d2221,#171a20);border:1px solid rgba(167,243,107,.25);border-radius:24px;padding:clamp(28px,6vw,58px);display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{max-width:650px}.contact p{color:var(--muted);margin-top:14px;font-size:14px;max-width:500px}footer{padding:30px 0 45px;display:flex;justify-content:space-between;gap:20px;align-items:center;color:var(--muted);font-size:12px}.footer-links{display:flex;gap:20px;flex-wrap:wrap}.footer-links a{color:var(--ink);text-decoration:none}.footer-links a:hover{color:var(--accent)}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
-@media(max-width:760px){.wrap{width:min(100% - 36px,var(--max))}header{height:72px}nav{gap:13px}nav a:not(.nav-cta){display:none}.hero{padding:85px 0 75px}.section{padding:60px 0}.section-top{display:block}.section-intro{margin-top:15px}.offer{grid-template-columns:1fr}.projects{grid-template-columns:1fr 1fr}.project{min-height:220px}.process{grid-template-columns:1fr 1fr}.faq{grid-template-columns:1fr;gap:22px}.contact{align-items:flex-start;flex-direction:column}}
-@media(max-width:480px){h1{font-size:clamp(46px,13vw,64px)}.services,.projects{grid-template-columns:1fr}.service{min-height:185px}.project{min-height:190px}.actions .button{width:100%}.micro-proof{gap:10px;flex-direction:column}.offer-main,.offer-side{padding:27px}.process{gap:24px 15px}footer{align-items:flex-start;flex-direction:column}}
+  :root {
+    --bg: #F7F5EE;
+    --bg-alt: #EFECE2;
+    --ink: #111111;
+    --mut: #55534E;
+    --accent: #6374E8;
+    --accent-soft: #DCE0FA;
+    --card: #FFFFFF;
+    --line: #E0DDD2;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* =========================================
+     INTRO ANIMADA (PRELOADER)
+     ========================================= */
+  #intro-screen {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease;
+  }
+
+  #intro-screen.hidden {
+    transform: translateY(-100%);
+    pointer-events: none;
+  }
+
+  .intro-logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .intro-star {
+    width: 110px;
+    height: 110px;
+    margin-bottom: -12px;
+    z-index: 1;
+  }
+
+  .intro-star path {
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    animation: drawStar 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.15s;
+  }
+
+  .intro-wordmark {
+    font-size: clamp(46px, 9vw, 76px);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    color: var(--ink);
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUpIntro 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.55s;
+  }
+
+  .intro-wordmark span {
+    color: var(--accent);
+  }
+
+  .intro-sub {
+    margin-top: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0;
+    animation: fadeUpIntro 0.6s ease forwards 0.85s;
+  }
+
+  @keyframes drawStar {
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes fadeUpIntro {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* =========================================
+     FONDO DECORATIVO DE ESTRELLA SUTIL
+     ========================================= */
+  .bg-watermark-star {
+    position: fixed;
+    right: -120px;
+    top: 12%;
+    width: 580px;
+    height: 580px;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* =========================================
+     LAYOUT & HEADER EDITORIAL
+     ========================================= */
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 24px 72px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 24px;
+    border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 48px;
+  }
+
+  .brand-lockup {
+    display: inline-flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .brand-title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .brand-title .dot {
+    color: var(--accent);
+  }
+
+  .mini-star {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  .header-meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .index-num {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .badge {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--mut);
+  }
+
+  /* =========================================
+     HERO SECTION
+     ========================================= */
+  .hero {
+    padding: 12px 0 36px;
+  }
+
+  .pill-tag {
+    display: inline-block;
+    background-color: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: clamp(44px, 8.2vw, 82px);
+    font-weight: 800;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  h1 em {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  .lede {
+    font-size: clamp(18px, 2.3vw, 22px);
+    color: var(--mut);
+    max-width: 650px;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 32px 0 14px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .btn-primary {
+    background-color: var(--accent);
+    color: #FFFFFF;
+    box-shadow: 0 10px 24px -6px rgba(99, 116, 232, 0.5);
+  }
+
+  .btn-primary:hover {
+    background-color: #4f61dc;
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+  }
+
+  .btn-ghost:hover {
+    background-color: var(--ink);
+    color: var(--bg);
+  }
+
+  .note {
+    color: var(--mut);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* =========================================
+     GRID DE SERVICIOS & TARJETAS
+     ========================================= */
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1.5px solid var(--ink);
+    padding-top: 18px;
+    margin-bottom: 24px;
+  }
+
+  .section-head span {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+  }
+
+  h2 {
+    font-size: clamp(28px, 4.5vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    line-height: 1.05;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1.5px solid var(--line);
+    border-radius: 20px;
+    padding: 26px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 32px -12px rgba(17, 17, 17, 0.08);
+  }
+
+  .card-num {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 14px;
+    letter-spacing: 0.06em;
+  }
+
+  .card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    color: var(--mut);
+    font-size: 15px;
+  }
+
+  /* =========================================
+     SECCIÓN DE PRECIOS
+     ========================================= */
+  section {
+    margin-top: 64px;
+  }
+
+  .price-card.featured {
+    background-color: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+
+  .price-card.featured p {
+    color: #C7C3B8;
+  }
+
+  .price-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-bottom: 14px;
+    width: fit-content;
+  }
+
+  .price-card.featured .price-tag {
+    background: var(--accent);
+    color: #FFFFFF;
+  }
+
+  .price {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .price span {
+    color: var(--accent);
+  }
+
+  .price small {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    opacity: 0.8;
+  }
+
+  /* =========================================
+     SECCIÓN DEMO INTERACTIVA
+     ========================================= */
+  .demo-box {
+    background-color: var(--accent-soft);
+    border: 2px solid var(--accent);
+    border-radius: 24px;
+    padding: clamp(28px, 5vw, 44px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .demo-box h2 {
+    color: var(--ink);
+  }
+
+  .demo-box p {
+    max-width: 560px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* =========================================
+     CÓMO TRABAJAMOS (PASOS NUMERADOS)
+     ========================================= */
+  .steps-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .step-item {
+    border-top: 2px solid var(--ink);
+    padding-top: 16px;
+  }
+
+  .step-item .step-idx {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.04em;
+    margin-bottom: 6px;
+  }
+
+  .step-item b {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+
+  .step-item span {
+    font-size: 14.5px;
+    color: var(--mut);
+  }
+
+  /* =========================================
+     FOOTER
+     ========================================= */
+  footer {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1.5px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* =========================================
+     CLASES DE SCROLL ANIMADO (REVEAL)
+     ========================================= */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .delay-1 { transition-delay: 0.08s; }
+  .delay-2 { transition-delay: 0.16s; }
+  .delay-3 { transition-delay: 0.24s; }
+  .delay-4 { transition-delay: 0.32s; }
+
+  @media (max-width: 600px) {
+    .cta-row .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 </style>
 </head>
 <body>
-<div class="ambient"></div><div class="wrap">
-<header><a class="brand" href="#" aria-label="Sesgo Estudio, inicio"><span class="brand-mark">✳</span><span>SESGO.<small>ESTUDIO CREATIVO</small></span></a><nav aria-label="Navegación principal"><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#proceso">Proceso</a><a class="nav-cta" href="https://wa.me/message/RH5WB56U7SPRF1" target="_blank" rel="noopener">Cotizar proyecto ↗</a></nav></header>
-<main>
-<section class="hero"><div class="eyebrow reveal">Estudio digital independiente · Mazatlán</div><h1 class="reveal">Tu negocio tiene algo que <span>merece verse.</span></h1><p class="hero-copy reveal">Creamos sitios web, catálogos digitales y herramientas a medida para que tu negocio se vea profesional, genere confianza y convierta visitas en conversaciones con clientes.</p><div class="actions reveal"><a class="button primary" href="https://wa.me/message/RH5WB56U7SPRF1" target="_blank" rel="noopener">Cuéntanos tu proyecto ↗</a><a class="button secondary" href="#proyectos">Conoce nuestro trabajo ↓</a></div><div class="micro-proof reveal"><span><i></i> Diseño personalizado</span><span><i></i> Adaptado a celular</span><span><i></i> Atención directa</span></div></section>
-<section class="section" id="servicios"><div class="section-top reveal"><div><div class="kicker">Lo que hacemos / 01</div><h2>Herramientas digitales<br>para avanzar.</h2></div><p class="section-intro">No se trata solo de tener una página. Se trata de crear una experiencia clara que ayude a tus clientes a entender lo que haces y dar el siguiente paso.</p></div><div class="services">
-<article class="service reveal"><div class="service-num">01 — PRESENCIA</div><h3>Diseño y desarrollo web</h3><p>Un sitio propio para presentar tu negocio, tus servicios y tus ventajas con una imagen profesional, rápida y adaptable a cualquier pantalla.</p><span class="tag">Para marcas y negocios</span></article>
-<article class="service reveal"><div class="service-num">02 — CATÁLOGO</div><h3>Menús y catálogos digitales</h3><p>Productos, servicios, fotografías y precios organizados en un enlace fácil de compartir desde redes sociales, QR o WhatsApp.</p><span class="tag">Fácil de consultar y actualizar</span></article>
-<article class="service reveal"><div class="service-num">03 — CONVERSIÓN</div><h3>Experiencias de pedido</h3><p>Catálogos interactivos que permiten seleccionar productos y enviar el pedido directamente a tu WhatsApp, sin plataformas complicadas.</p><span class="tag">Contacto directo con tus clientes</span></article>
-<article class="service reveal"><div class="service-num">04 — OPERACIÓN</div><h3>Sistemas a medida</h3><p>Paneles administrativos y herramientas para organizar información, solicitudes, inventario o procesos específicos de tu negocio.</p><span class="tag">Diseñados según tu operación</span></article>
-</div></section>
-<section class="section" id="inversion"><div class="section-top reveal"><div><div class="kicker">Una inversión clara / 02</div><h2>Empecemos por<br>lo que necesitas.</h2></div><p class="section-intro">Cada negocio tiene objetivos distintos. Podemos comenzar con una solución sencilla y crecerla conforme tu operación lo necesite.</p></div><div class="offer"><div class="offer-main reveal"><div><div class="kicker">Solución de entrada</div><h3>Tu menú digital,<br>listo para compartir.</h3><p>Una forma práctica de mostrar tus productos y recibir pedidos sin depender de un PDF que se pierde en el chat.</p></div><a class="button" href="https://wa.me/message/RH5WB56U7SPRF1" target="_blank" rel="noopener">Solicitar información ↗</a></div><div class="offer-side reveal"><div class="kicker">Precio de apertura</div><div class="price">$2,000 <span style="font-size:14px;letter-spacing:0">MXN desde</span></div><h3>Menú digital</h3><p>Ideal para cafeterías, restaurantes y negocios que quieren compartir su oferta y recibir pedidos.</p><ul class="included"><li>Diseño adaptable a celular</li><li>Productos y categorías</li><li>Acceso mediante enlace o QR</li><li>Pedido directo por WhatsApp</li></ul><p class="note">El alcance, contenido y tiempos se confirman en una cotización antes de iniciar. Sitios web y sistemas se cotizan según sus funciones.</p></div></div></section>
-<section class="section" id="proyectos"><div class="section-top reveal"><div><div class="kicker">Trabajo en contexto / 03</div><h2>Proyectos que<br>ya están en marcha.</h2></div><p class="section-intro">Desarrollos reales que muestran cómo llevamos una necesidad de negocio a una experiencia digital.</p></div><div class="projects">
-<a class="project reveal" href="https://mazwavetours.com/" target="_blank" rel="noopener"><div><span class="project-label">Turismo · Sitio web</span><h3>Maz Wave Tours</h3><p>Experiencias y recorridos en Mazatlán.</p></div><span class="project-link">Visitar sitio ↗</span></a>
-<a class="project reveal" href="https://sesgoestudio.github.io/saifilm/" target="_blank" rel="noopener"><div><span class="project-label">Audiovisual · Portafolio</span><h3>SAI FILM</h3><p>Portafolio para servicios y proyectos audiovisuales.</p></div><span class="project-link">Visitar sitio ↗</span></a>
-<a class="project reveal" href="https://vrutocafe.github.io/VRUTO/" target="_blank" rel="noopener"><div><span class="project-label">Gastronomía · Demo funcional</span><h3>VRUTO Café</h3><p>Menú digital con pedidos por WhatsApp.</p></div><span class="project-link">Probar demo ↗</span></a>
-</div></section>
-<section class="section" id="proceso"><div class="section-top reveal"><div><div class="kicker">De la idea al lanzamiento / 04</div><h2>Un proceso sencillo.<br>Sin vueltas.</h2></div><p class="section-intro">Hablamos de tu objetivo, definimos el alcance y construimos algo que puedas probar antes de publicarlo.</p></div><div class="process"><div class="step reveal"><strong>01</strong><h3>Nos cuentas</h3><p>Qué haces, qué necesitas y qué quieres conseguir.</p></div><div class="step reveal"><strong>02</strong><h3>Lo aterrizamos</h3><p>Recibes una propuesta con alcance, precio y tiempos claros.</p></div><div class="step reveal"><strong>03</strong><h3>Lo construimos</h3><p>Diseñamos, desarrollamos y revisamos contigo.</p></div><div class="step reveal"><strong>04</strong><h3>Lo publicamos</h3><p>Te entregamos el proyecto y te explicamos cómo usarlo.</p></div></div></section>
-<section class="section"><div class="faq"><div class="reveal"><div class="kicker">Antes de empezar / 05</div><h2>Preguntas<br>frecuentes.</h2></div><div class="faq-list reveal"><details><summary>¿Trabajan solo con negocios de Mazatlán?</summary><p>Estamos en Mazatlán, Sinaloa, pero podemos trabajar proyectos a distancia con negocios de otras ciudades.</p></details><details><summary>¿Puedo pedir algo aunque no sepa exactamente qué necesito?</summary><p>Claro. Cuéntanos qué quieres mejorar en tu negocio y te ayudamos a definir una solución realista.</p></details><details><summary>¿Cuánto cuesta un sitio web?</summary><p>Depende de las secciones, el contenido y las funciones. Primero conocemos tu proyecto y después te compartimos una cotización clara, sin compromiso.</p></details><details><summary>¿Puedo actualizar la información después?</summary><p>Podemos integrar herramientas de administración para que ciertos contenidos se actualicen fácilmente. Se define según las necesidades de cada proyecto.</p></details></div></div></section>
-<section class="section"><div class="contact reveal"><div><div class="kicker">Tu siguiente paso</div><h2>Hablemos de lo que tu negocio necesita.</h2><p>Cuéntanos qué tienes en mente. Te responderemos personalmente para entender el proyecto y orientarte sobre la mejor opción.</p></div><a class="button primary" href="https://wa.me/message/RH5WB56U7SPRF1" target="_blank" rel="noopener">Escribir por WhatsApp ↗</a></div></section>
-</main>
-<footer><div><strong style="color:var(--ink)">SESGO ESTUDIO.</strong> · Mazatlán, Sinaloa</div><div class="footer-links"><a href="https://wa.me/message/RH5WB56U7SPRF1" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/sesgo_estudio" target="_blank" rel="noopener">Instagram @sesgo_estudio</a></div><div>© <span id="year"></span> Sesgo Estudio</div></footer>
+
+<!-- PANTALLA DE INTRODUCCIÓN ANIMADA -->
+<div id="intro-screen" aria-hidden="true">
+  <div class="intro-logo-box">
+    <svg class="intro-star" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M104 14 L123 76 L186 73 L133 111 L155 174 L102 134 L46 176 L70 112 L18 75 L82 77 Z"
+            stroke="#6374E8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="intro-wordmark">SESGO<span>.</span></div>
+    <div class="intro-sub">Estudio Creativo Independiente</div>
+  </div>
 </div>
+
+<!-- ESTRELLA DE FONDO SUTIL -->
+<svg class="bg-watermark-star" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M104 14 L123 76 L186 73 L133 111 L155 174 L102 134 L46 176 L70 112 L18 75 L82 77 Z"
+        stroke="#6374E8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+<div class="wrap">
+  <!-- HEADER -->
+  <header class="reveal">
+    <a href="#" class="brand-lockup">
+      <div class="brand-title">
+        <svg class="mini-star" viewBox="0 0 200 200" fill="none">
+          <path d="M104 14 L123 76 L186 73 L133 111 L155 174 L102 134 L46 176 L70 112 L18 75 L82 77 Z"
+                stroke="#6374E8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        SESGO<span class="dot">.</span>
+      </div>
+      <span class="brand-tag">Diseño Web / Desarrollo</span>
+    </a>
+
+    <div class="header-meta">
+      <span class="index-num">001</span>
+      <span class="badge">Mazatlán, Sinaloa · Estudio independiente</span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <div class="hero">
+      <div class="pill-tag reveal">Precios especiales de apertura</div>
+      <h1 class="reveal delay-1">Otra forma<br>de hacer <em>las cosas.</em></h1>
+      <p class="lede reveal delay-2">
+        Diseño web, menús digitales y sistemas a la medida para negocios de Mazatlán. Sin plantillas genéricas: una presencia propia, clara y lista para vender.
+      </p>
+
+      <div class="cta-row reveal delay-3">
+        <a class="btn btn-primary" href="https://wa.me/message/RH5WB56U7SPRF1" target="_blank" rel="noopener">
+          Hablemos de tu proyecto ↗
+        </a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/sesgo_estudio" target="_blank" rel="noopener">
+          Instagram @sesgo_estudio
+        </a>
+      </div>
+      <p class="note reveal delay-4">Respuesta rápida por WhatsApp · Desde $2,000 MXN.</p>
+    </div>
+
+    <!-- SERVICIOS -->
+    <section>
+      <div class="section-head reveal">
+        <h2>Servicios</h2>
+        <span>01 / QUÉ HACEMOS</span>
+      </div>
+
+      <div class="grid">
+        <div class="card reveal delay-1">
+          <div>
+            <div class="card-num">01 — WEB</div>
+            <h3>Diseño web</h3>
+            <p>Sitios 100% personalizados para darle presencia propia a tu negocio: quién eres, qué ofreces y cómo contactarte.</p>
+          </div>
+        </div>
+
+        <div class="card reveal delay-2">
+          <div>
+            <div class="card-num">02 — CATÁLOGO</div>
+            <h3>Menús y catálogos</h3>
+            <p>Tu menú o catálogo siempre actualizado, adaptable a celulares y fácil de compartir por QR, Instagram o WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="card reveal delay-3">
+          <div>
+            <div class="card-num">03 — VENTAS</div>
+            <h3>Pedidos por WhatsApp</h3>
+            <p>El cliente arma su pedido directamente en tu menú y te llega listo a WhatsApp. Sin apps ni comisiones.</p>
+          </div>
+        </div>
+
+        <div class="card reveal delay-4">
+          <div>
+            <div class="card-num">04 — OPERACIÓN</div>
+            <h3>Sistemas a medida</h3>
+            <p>Herramientas adaptadas a tu operación diaria: control de pedidos, inventario, clientes y administración.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECIOS DE APERTURA -->
+    <section>
+      <div class="section-head reveal">
+        <h2>Precios de apertura</h2>
+        <span>02 / INVERSIÓN</span>
+      </div>
+
+      <div class="grid">
+        <div class="card price-card featured reveal delay-1">
+          <div>
+            <span class="price-tag">Más solicitado</span>
+            <div class="price"><span>$2,000</span> <small>MXN desde</small></div>
+            <h3>Menú digital</h3>
+            <p>Menú interactivo con código QR, fotografías y pedido directo por WhatsApp. Ideal para cafés y restaurantes.</p>
+          </div>
+        </div>
+
+        <div class="card price-card reveal delay-2">
+          <div>
+            <span class="price-tag">Presencia total</span>
+            <div class="price">A cotizar</div>
+            <h3>Sitio web</h3>
+            <p>Página completa de tu negocio o marca personal, con secciones estratégicas, dominio y diseño propio.</p>
+          </div>
+        </div>
+
+        <div class="card price-card reveal delay-3">
+          <div>
+            <span class="price-tag">Escalable</span>
+            <div class="price">A cotizar</div>
+            <h3>Sistema a medida</h3>
+            <p>Desarrollado según lo que necesite tu flujo de trabajo. Definimos alcance y entrega en una llamada corta.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="note reveal">¿Qué incluye el precio base? Se define contigo antes de empezar: número de secciones, fotos, entrega y tiempos. Sin sorpresas.</p>
+    </section>
+
+    <!-- DEMO INTERACTIVA -->
+    <section class="reveal">
+      <div class="demo-box">
+        <span class="pill-tag" style="background:#fff; width:fit-content; margin:0;">03 / PRUEBA EN VIVO</span>
+        <h2>Ver un ejemplo real</h2>
+        <p>No compres una promesa: toca un demo. Este menú funciona exactamente como lo haría el de tu negocio.</p>
+        <div>
+          <a class="btn btn-primary" href="https://vrutocafe.github.io/VRUTO/" target="_blank" rel="noopener">
+            Ver demo: menú digital con pedido por WhatsApp →
+          </a>
+        </div>
+        <span class="note" style="color: var(--ink); opacity: 0.75;">Demo real creado por Sesgo Estudio para mostrar la experiencia del cliente.</span>
+      </div>
+    </section>
+
+
+    <!-- PORTAFOLIO / PROYECTOS REALES -->
+    <section>
+      <div class="section-head reveal">
+        <h2>Proyectos</h2>
+        <span>04 / TRABAJO REAL</span>
+      </div>
+      <div class="grid">
+        <a class="card reveal delay-1" href="https://mazwavetours.com/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+          <div><div class="card-num">01 — TURISMO</div><h3>Maz Wave Tours</h3><p>Sitio web para experiencias y recorridos turísticos en Mazatlán.</p></div>
+          <strong style="color:var(--accent);margin-top:20px">Visitar sitio ↗</strong>
+        </a>
+        <a class="card reveal delay-2" href="https://sesgoestudio.github.io/saifilm/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+          <div><div class="card-num">02 — AUDIOVISUAL</div><h3>SAI FILM</h3><p>Portafolio digital para servicios y proyectos audiovisuales.</p></div>
+          <strong style="color:var(--accent);margin-top:20px">Visitar sitio ↗</strong>
+        </a>
+        <a class="card reveal delay-3" href="https://vrutocafe.github.io/VRUTO/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+          <div><div class="card-num">03 — GASTRONOMÍA</div><h3>VRUTO Café</h3><p>Demostración funcional de menú digital con pedidos por WhatsApp.</p></div>
+          <strong style="color:var(--accent);margin-top:20px">Probar demo ↗</strong>
+        </a>
+      </div>
+    </section>
+
+    <!-- CIERRE COMERCIAL -->
+    <section class="reveal">
+      <div class="demo-box">
+        <span class="pill-tag" style="background:#fff;width:fit-content;margin:0">HABLEMOS DE TU NEGOCIO</span>
+        <h2>Una buena idea merece una buena presencia.</h2>
+        <p>Cuéntanos qué quieres mejorar de tu negocio. Te ayudamos a encontrar una solución digital clara, con alcance y precio definidos antes de comenzar.</p>
+        <div><a class="btn btn-primary" href="https://wa.me/message/RH5WB56U7SPRF1" target="_blank" rel="noopener">Solicitar una cotización ↗</a></div>
+      </div>
+    </section>
+
+    <!-- CÓMO TRABAJAMOS -->
+    <section>
+      <div class="section-head reveal">
+        <h2>Cómo trabajamos</h2>
+        <span>05 / PROCESO</span>
+      </div>
+
+      <ol class="steps-list">
+        <li class="step-item reveal delay-1">
+          <span class="step-idx">01.</span>
+          <b>Cuéntanos tu proyecto</b>
+          <span>Por WhatsApp o DM en Instagram, en menos de 2 minutos.</span>
+        </li>
+        <li class="step-item reveal delay-2">
+          <span class="step-idx">02.</span>
+          <b>Propuesta y precio claro</b>
+          <span>Te presentamos la solución exacta y el costo antes de arrancar.</span>
+        </li>
+        <li class="step-item reveal delay-3">
+          <span class="step-idx">03.</span>
+          <b>Construcción y prueba</b>
+          <span>Lo desarrollamos y lo pruebas funcionando en tu celular antes de lanzar.</span>
+        </li>
+        <li class="step-item reveal delay-4">
+          <span class="step-idx">04.</span>
+          <b>Lanzamiento y soporte</b>
+          <span>Recibes tu QR, enlace para tu bio y actualizaciones cuando lo necesites.</span>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="reveal">
+    <div>
+      <strong>SESGO ESTUDIO.</strong> · Mazatlán, Sinaloa
+    </div>
+    <div class="footer-links">
+      <a href="https://wa.me/message/RH5WB56U7SPRF1" target="_blank" rel="noopener">WhatsApp Directo</a>
+      <a href="https://www.instagram.com/sesgo_estudio" target="_blank" rel="noopener">@sesgo_estudio</a>
+    </div>
+  </footer>
+</div>
+
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-const items=document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -25px 0px'});items.forEach(item=>observer.observe(item));}else{items.forEach(item=>item.classList.add('visible'))}
+  // 1. Control de Intro Animada
+  window.addEventListener('DOMContentLoaded', () => {
+    const intro = document.getElementById('intro-screen');
+    setTimeout(() => {
+      intro.classList.add('hidden');
+    }, 1750);
+  });
+
+  // 2. Animaciones al hacer Scroll (Intersection Observer)
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealElements.forEach(el => observer.observe(el));
 </script>
-</body></html>
+</body>
+</html>
