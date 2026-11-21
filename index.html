@@ -144,8 +144,8 @@
 
   header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     padding-bottom: 24px;
     border-bottom: 1.5px solid var(--ink);
     margin-bottom: 48px;
@@ -153,40 +153,16 @@
 
   .brand-lockup {
     display: inline-flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: var(--ink);
-  }
-
-  .brand-title {
-    font-size: 26px;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1;
-    display: flex;
     align-items: center;
-    gap: 8px;
-  }
-
-  .brand-title .dot {
-    color: var(--accent);
+    text-decoration: none;
+    line-height: 0;
   }
 
   .mini-star {
-    width: 40px;
-    height: 40px;
+    width: 112px;
+    height: 112px;
     object-fit: contain;
     display: block;
-    flex: 0 0 auto;
-  }
-
-  .brand-tag {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    margin-top: 4px;
-    text-transform: uppercase;
   }
 
   .header-meta {
@@ -572,18 +548,9 @@
 <div class="wrap">
   <!-- HEADER -->
   <header class="reveal">
-    <a href="#" class="brand-lockup">
-      <div class="brand-title">
-        <img class="mini-star" src="https://raw.githubusercontent.com/sesgoestudio/web/main/logo-sesgo.png" alt="Logotipo de Sesgo Estudio" width="40" height="40">
-        SESGO<span class="dot">.</span>
-      </div>
-      <span class="brand-tag">Diseño Web / Desarrollo</span>
+    <a href="#" class="brand-lockup" aria-label="Sesgo Estudio, inicio">
+      <img class="mini-star" src="https://raw.githubusercontent.com/sesgoestudio/web/main/logo-sesgo.png" alt="Logotipo de Sesgo Estudio" width="112" height="112">
     </a>
-
-    <div class="header-meta">
-      <span class="index-num">001</span>
-      <span class="badge">Mazatlán, Sinaloa · Estudio independiente</span>
-    </div>
   </header>
 
   <!-- HERO -->
