@@ -144,11 +144,14 @@
 
   header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    gap: 24px;
     padding-bottom: 24px;
     border-bottom: 1.5px solid var(--ink);
     margin-bottom: 48px;
+    position: relative;
+    z-index: 20;
   }
 
   .brand-lockup {
@@ -164,6 +167,34 @@
     object-fit: contain;
     display: block;
   }
+
+  .header-right { display:flex; align-items:center; gap:26px; }
+  .header-meta { text-align:right; display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
+  .index-num { font-size:18px; font-weight:700; letter-spacing:-.02em; }
+  .badge { font-size:12px; font-weight:600; color:var(--mut); }
+  .menu-toggle {
+    width:48px;height:48px;border:1px solid var(--line);border-radius:50%;
+    background:var(--paper);display:flex;flex-direction:column;align-items:center;
+    justify-content:center;gap:6px;cursor:pointer;transition:.25s;
+  }
+  .menu-toggle:hover,.menu-toggle[aria-expanded="true"] { background:var(--accent-soft);border-color:var(--accent); }
+  .menu-toggle span { width:18px;height:1.5px;background:var(--ink);transition:transform .25s; }
+  .menu-toggle[aria-expanded="true"] span:first-child { transform:translateY(3.75px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:last-child { transform:translateY(-3.75px) rotate(-45deg); }
+  .site-menu {
+    position:absolute;right:0;top:calc(100% + 12px);width:min(320px,calc(100vw - 48px));
+    padding:12px 20px;background:var(--paper);border:1px solid var(--line);
+    box-shadow:0 18px 50px rgba(20,20,35,.13);border-radius:18px;
+    display:flex;flex-direction:column;opacity:0;visibility:hidden;transform:translateY(-8px);
+    transition:opacity .22s,transform .22s,visibility .22s;
+  }
+  .site-menu.open { opacity:1;visibility:visible;transform:translateY(0); }
+  .site-menu a { display:flex;align-items:center;justify-content:space-between;gap:18px;
+    padding:14px 2px;color:var(--ink);text-decoration:none;font-size:14px;font-weight:700;
+    border-bottom:1px solid var(--line); }
+  .site-menu a span { color:var(--accent);font-size:10px;letter-spacing:.12em; }
+  .site-menu a:hover { color:var(--accent); }
+  .site-menu .menu-contact { color:var(--accent);border:0;padding-bottom:10px; }
 
   .header-meta {
     text-align: right;
@@ -551,6 +582,22 @@
     <a href="#" class="brand-lockup" aria-label="Sesgo Estudio, inicio">
       <img class="mini-star" src="https://raw.githubusercontent.com/sesgoestudio/web/main/logo-sesgo.png" alt="Logotipo de Sesgo Estudio" width="112" height="112">
     </a>
+    <div class="header-right">
+      <div class="header-meta">
+        <span class="index-num">001</span>
+        <span class="badge">Mazatlán, Sinaloa · Estudio independiente</span>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-menu">
+        <span></span><span></span>
+      </button>
+      <nav class="site-menu" id="site-menu" aria-label="Menú principal">
+        <a href="#servicios">Servicios <span>01</span></a>
+        <a href="#precios">Precios <span>02</span></a>
+        <a href="#proyectos">Proyectos <span>03</span></a>
+        <a href="#proceso">Proceso <span>04</span></a>
+        <a class="menu-contact" href="https://wa.me/message/RH5WB56U7SPRF1" target="_blank" rel="noopener">Hablemos ↗</a>
+      </nav>
+    </div>
   </header>
 
   <!-- HERO -->
@@ -771,5 +818,26 @@
 
   revealElements.forEach(el => observer.observe(el));
 </script>
-</body>
+<script>
+  const menuButton = document.querySelector('.menu-toggle');
+  const siteMenu = document.querySelector('.site-menu');
+  if (menuButton && siteMenu) {
+    const closeMenu = () => {
+      siteMenu.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menú');
+    };
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
+      siteMenu.classList.toggle('open', !isOpen);
+    });
+    siteMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('click', event => {
+      if (!siteMenu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+  }
+</script>\n</body>
 </html>
