@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cotiza tu proyecto — SESGO ESTUDIO</title>
+<meta name="description" content="Cuéntanos qué necesita tu negocio. En SESGO Estudio preparamos una propuesta digital a tu medida.">
+<meta name="theme-color" content="#F7F5EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5EE;--ink:#111;--mut:#55534E;--accent:#6374E8;--soft:#DCE0FA;--line:#E0DDD2;--card:#fff;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:auto;padding:24px}
+header{display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid var(--ink);padding:8px 0 18px;margin-bottom:48px}
+.brand img{height:44px;width:auto;display:block}.back{color:var(--ink);font-size:13px;font-weight:800;text-decoration:none}
+.eyebrow{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:800}
+h1{font-size:clamp(38px,7vw,64px);line-height:.98;letter-spacing:-.05em;text-transform:uppercase;margin:12px 0}
+h1 em{font-style:normal;color:var(--accent)}.intro{color:var(--mut);font-size:17px;max-width:600px}
+.layout{display:grid;grid-template-columns:220px 1fr;gap:42px;margin-top:38px}
+aside{border-top:1.5px solid var(--ink);padding-top:16px}
+.stepnav{display:grid;gap:13px}.navstep{display:flex;gap:12px;align-items:center;color:#96938B;font-size:13px;font-weight:700}
+.navstep b{width:28px;height:28px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:11px}
+.navstep.active{color:var(--ink)}.navstep.active b{background:var(--accent);color:white;border-color:var(--accent)}
+.panel{background:var(--card);border:1.5px solid var(--line);border-radius:24px;padding:clamp(22px,5vw,38px);box-shadow:0 18px 50px rgba(20,20,35,.04)}
+.progress{height:4px;background:#eeece5;border-radius:8px;overflow:hidden;margin-bottom:28px}.progress span{display:block;height:100%;background:var(--accent);transition:width .3s}
+.step{display:none}.step.active{display:block;animation:appear .35s var(--ease)}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h2{font-size:clamp(25px,4vw,34px);letter-spacing:-.035em;line-height:1.1;margin:0 0 8px}.hint{color:var(--mut);font-size:14px;margin:0 0 25px}
+.field{display:grid;gap:8px;margin:18px 0}.field label{font-size:13px;font-weight:800}.field input,.field textarea,.field select{width:100%;padding:14px 15px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font:500 15px inherit;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(99,116,232,.12)}.field textarea{min-height:105px;resize:vertical}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice{position:relative}.choice input{position:absolute;opacity:0;pointer-events:none}.choice label{display:flex;align-items:center;min-height:64px;padding:14px;border:1.5px solid var(--line);border-radius:13px;font-size:14px;font-weight:700;cursor:pointer;transition:.2s}.choice input:checked+label{border-color:var(--accent);background:var(--soft);color:#3443b5}.choice label:hover{border-color:var(--accent)}
+.actions{display:flex;justify-content:space-between;gap:12px;margin-top:30px}.btn{border:0;border-radius:999px;padding:14px 22px;font:800 14px inherit;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:.2s}.primary{background:var(--accent);color:#fff}.primary:hover{background:#4f61dc;transform:translateY(-2px)}.secondary{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}.secondary:disabled{opacity:.35;cursor:not-allowed}
+.privacy{font-size:12px;color:var(--mut);margin-top:18px}.success{display:none;padding:18px;background:var(--soft);border-radius:14px;margin-top:18px;font-size:14px}
+footer{margin:60px 0 20px;padding-top:20px;border-top:1.5px solid var(--ink);font-size:13px;color:var(--mut);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:680px){.layout{grid-template-columns:1fr;gap:18px}aside{border:0;padding:0}.stepnav{display:flex;justify-content:space-between}.navstep{font-size:0}.navstep b{font-size:11px}.choices{grid-template-columns:1fr}.wrap{padding:18px}.panel{border-radius:18px}header{margin-bottom:34px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="./" aria-label="SESGO Estudio"><img src="logo-sesgo.png" alt="SESGO Estudio"></a><a class="back" href="./">← Volver al sitio</a></header>
+<main>
+<div class="eyebrow">SESGO ESTUDIO · COTIZACIONES</div>
+<h1>Hagamos algo<br><em>que funcione.</em></h1>
+<p class="intro">Cuéntanos un poco de tu negocio y lo que tienes en mente. No necesitas tenerlo todo definido; nosotros te ayudamos a aterrizar la idea.</p>
+<div class="layout">
+<aside><div class="stepnav" aria-label="Progreso">
+<div class="navstep active"><b>01</b> Tu negocio</div><div class="navstep"><b>02</b> Lo que necesitas</div><div class="navstep"><b>03</b> Alcance</div><div class="navstep"><b>04</b> Contacto</div>
+</div></aside>
+<div class="panel">
+<div class="progress"><span id="progress" style="width:25%"></span></div>
+<form id="quoteForm">
+<section class="step active" data-step="0">
+<h2>Primero, cuéntanos de ti.</h2><p class="hint">Queremos entender quién está detrás del proyecto.</p>
+<div class="field"><label for="business">Nombre de tu negocio o proyecto *</label><input id="business" name="business" required placeholder="Ej. Café del Puerto"></div>
+<div class="field"><label for="industry">¿A qué se dedica? *</label><select id="industry" name="industry" required><option value="">Selecciona una opción</option><option>Restaurante, café o alimentos</option><option>Hotel, hospedaje o turismo</option><option>Marca personal o profesional</option><option>Tienda o comercio</option><option>Servicios profesionales</option><option>Otro giro</option></select></div>
+<div class="field"><label for="presence">¿Ya tienes presencia digital?</label><select id="presence" name="presence"><option>No todavía</option><option>Solo redes sociales</option><option>Ya tengo página web</option><option>Tengo redes y página web</option></select></div>
+</section>
+<section class="step" data-step="1">
+<h2>¿Qué te gustaría crear?</h2><p class="hint">Elige lo que más se acerque a lo que necesitas. Podemos combinar servicios.</p>
+<div class="choices">
+<div class="choice"><input type="radio" id="s1" name="service" value="Sitio web" required><label for="s1">Sitio web para mi negocio</label></div>
+<div class="choice"><input type="radio" id="s2" name="service" value="Menú o catálogo digital"><label for="s2">Menú o catálogo digital</label></div>
+<div class="choice"><input type="radio" id="s3" name="service" value="Pedidos o reservas por WhatsApp"><label for="s3">Pedidos o reservas por WhatsApp</label></div>
+<div class="choice"><input type="radio" id="s4" name="service" value="Sistema personalizado"><label for="s4">Sistema personalizado</label></div>
+<div class="choice"><input type="radio" id="s5" name="service" value="No estoy seguro, necesito orientación"><label for="s5">No estoy seguro, necesito orientación</label></div>
+</div>
+<div class="field"><label for="details">¿Qué te gustaría que pudiera hacer?</label><textarea id="details" name="details" placeholder="Ej. Mostrar mis servicios, recibir solicitudes, enseñar productos, gestionar reservas..."></textarea></div>
+</section>
+<section class="step" data-step="2">
+<h2>Un poco más sobre el proyecto.</h2><p class="hint">Esto nos ayuda a preparar una propuesta realista. Puedes dejar el presupuesto en blanco.</p>
+<div class="field"><label for="features">¿Qué es indispensable para ti?</label><textarea id="features" name="features" placeholder="Ej. Que yo pueda actualizar precios, recibir pedidos, mostrar fotos..."></textarea></div>
+<div class="field"><label for="budget">¿Tienes un presupuesto aproximado?</label><select id="budget" name="budget"><option value="Prefiero definirlo con la propuesta">Prefiero definirlo con la propuesta</option><option>Menos de $3,000 MXN</option><option>$3,000 a $6,000 MXN</option><option>$6,000 a $10,000 MXN</option><option>Más de $10,000 MXN</option></select></div>
+<div class="field"><label for="timing">¿Para cuándo te gustaría tenerlo?</label><select id="timing" name="timing"><option>Lo antes posible</option><option>En las próximas 2 a 4 semanas</option><option>En 1 a 3 meses</option><option>Estoy explorando opciones</option></select></div>
+</section>
+<section class="step" data-step="3">
+<h2>¿Cómo te contactamos?</h2><p class="hint">Al enviar, se abrirá WhatsApp con tu solicitud lista para compartir.</p>
+<div class="field"><label for="name">Tu nombre *</label><input id="name" name="name" autocomplete="name" required placeholder="¿Cómo te llamas?"></div>
+<div class="field"><label for="phone">Tu WhatsApp (opcional)</label><input id="phone" name="phone" inputmode="tel" placeholder="Tu número de contacto"></div>
+<div class="field"><label for="email">Correo electrónico (opcional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="tunombre@correo.com"></div>
+<p class="privacy">Tus respuestas se usarán únicamente para preparar y dar seguimiento a esta cotización. No se guardan en este sitio.</p>
+</section>
+<div class="actions"><button class="btn secondary" type="button" id="prev" disabled>← Anterior</button><button class="btn primary" type="button" id="next">Continuar →</button></div>
+<div class="success" id="success" role="status">Se abrirá WhatsApp con el resumen de tu proyecto. Revisa el mensaje y presiona enviar para hacérnoslo llegar.</div>
+</form>
+</div>
+</div>
+</main>
+<footer><span>SESGO ESTUDIO. · Mazatlán, Sinaloa</span><span>Diseño claro. Soluciones a medida.</span></footer>
+</div>
+<script>
+(() => {
+const form=document.getElementById('quoteForm'),steps=[...document.querySelectorAll('.step')],nav=[...document.querySelectorAll('.navstep')],prev=document.getElementById('prev'),next=document.getElementById('next'),progress=document.getElementById('progress');
+let current=0;
+function show(n){current=n;steps.forEach((s,i)=>s.classList.toggle('active',i===n));nav.forEach((s,i)=>s.classList.toggle('active',i<=n));prev.disabled=n===0;next.textContent=n===3?'Enviar solicitud por WhatsApp ↗':'Continuar →';progress.style.width=((n+1)/steps.length*100)+'%';}
+function valid(){const required=[...steps[current].querySelectorAll('[required]')];for(const el of required){if(el.type==='radio'){if(!form.querySelector('input[name="'+el.name+'"]:checked')){el.focus();return false;}}else if(!el.reportValidity())return false;}return true;}
+prev.addEventListener('click',()=>show(Math.max(0,current-1)));
+next.addEventListener('click',()=>{
+if(!valid())return;
+if(current<3){show(current+1);return;}
+const d=new FormData(form),v=k=>String(d.get(k)||'').trim();
+const msg=['Hola, SESGO. Me gustaría cotizar un proyecto.','', '*NEGOCIO*',v('business'),'Giro: '+v('industry'),'Presencia digital: '+v('presence'),'','*LO QUE NECESITO*',v('service'),'Idea inicial: '+(v('details')||'Por definir'),'','*ALCANCE Y TIEMPOS*','Funciones importantes: '+(v('features')||'Por definir'),'Presupuesto: '+v('budget'),'Tiempo: '+v('timing'),'','*CONTACTO*',v('name'),'WhatsApp: '+(v('phone')||'No indicado'),'Correo: '+(v('email')||'No indicado')].join('\n');
+document.getElementById('success').style.display='block';
+const url='https://wa.me/526693285696?text='+encodeURIComponent(msg);
+window.open(url,'_blank','noopener');
+});
+})();
+</script>
+</body>
+</html>
